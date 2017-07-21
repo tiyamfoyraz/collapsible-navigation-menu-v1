@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+  <!-- Created By Tiyam Foyraz . 2017 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Collapsible Nav Bar</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+<body>
+ <!--side niavigation menu-->
+   <div id="sidenav">
+      <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a> 
+   </div>
+   
+<!--hamburger icon-->
+    <div id="main">
+        <span id="menu-icon" onclick="OpenNav()">&#9776;</span>
+    </div>
+    
+    
+  <script>
+    
+    //click to open navigation bar 
+     function OpenNav(){
+         document.getElementById("sidenav").style.width = "210px"; document.getElementById("main").style.marginLeft = "210px"; 
+        
+         document.getElementById("sidenav").style.backgroundColor = "#484646"; document.body.style.backgroundColor = "#" +(Math.random()*0xFFFFFF<<0).toString(16);
+        }
+
+    //click to close navigation bar     
+     function closeNav(){
+       document.getElementById("sidenav").style.width = "0";       document.getElementById("main").style.marginLeft = "0";  
+       document.body.style.backgroundColor = "#" +(Math.random()*0xFFFFFF<<0).toString(16);;
+     }
+    
+  </script>
+</body>
+</html>
